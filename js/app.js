@@ -24,7 +24,7 @@ let App = React.createClass({
 
   componentWillMount() {
     this.bindAsArray(
-      new Firebase("https://shitmymatessay.firebaseio.com/quotes"),
+      new Firebase("https://qotd-stevenocchipinti.firebaseio.com/quotes"),
       "quotes"
     );
   },
@@ -32,7 +32,7 @@ let App = React.createClass({
   render() {
     return (
       <div>
-        <h1>Shit My Mates Say</h1>
+        <h1>Quote Of The Day</h1>
         <QuoteForm onSubmit={this.submitQuote} />
         <QuoteList quotes={this.state.quotes} />
       </div>
